@@ -1,0 +1,11 @@
+ru:
+  js:
+    messages:
+      uploading_progress: "Загрузка файла..."
+      translation_progress: "Перевод..."
+      field_filled: "Поле не пустое. Выполнить перевод?"
+      fields_filled: "Нектороые поля не пустые. Выполнить перевод?"
+    tree:
+      titles:
+        expand_branch: "Развернуть"
+        collapse_branch: "Свернуть"

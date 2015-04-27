@@ -1,0 +1,4 @@
+<% unless flash[:danger] %>
+  $( '#upload-button' ).html( "<%= j "" %>" )
+  $( '#transl-table' ).html( "<%= j "#{render 'table'}".html_safe %>" )
+<% end %>

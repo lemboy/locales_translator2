@@ -1,0 +1,11 @@
+en:
+  js:
+    messages:
+      uploading_progress: "File uploading process..."
+      translation_progress: "Translation in progress..."
+      field_filled: "Field is not empty. Process?"
+      fields_filled: "Some fields is not empty. Process?"
+    tree:
+      titles:
+        expand_branch: "Expand this branch"
+        collapse_branch: "Collapse this branch"

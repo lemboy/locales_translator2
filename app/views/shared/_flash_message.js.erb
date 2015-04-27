@@ -1,0 +1,11 @@
+cleanMessage();
+<% unless flash.empty? %>
+  <% flash.each do |key, value| %>
+		<% if key.include?('danger') %>
+			$( '#flash-message-button' ).show();
+		<% end %>
+    $( "#flash-message" ).addClass( "<%= "alert alert-#{key}" %>"  );
+    $( "#flash-message-body" ).html( "<%= j "#{flash.discard(key)}" %>" );
+	<% end %>
+  setTimeout( function() { cleanMessage(); }, 30000 );
+<% end %>

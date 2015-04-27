@@ -1,0 +1,41 @@
+<%= form_for @document, html: {class: "form-inline", id: "transl-form"} do |f| %>
+	<div class="row">
+		<%= render 'button_upload' %>
+	  <%= f.text_field :src_file_name,  id: "src-file-name", :readonly => true, class: "form-control", title: t('form.title.source_file') %>
+	  <%= f.hidden_field :src_lang_code, id: "src-lang-code" %>
+	  <%= text_field_tag 'src_lang', Translator.lang_name(@document.src_lang_code), id: "src-lang", :readonly => true, class: "form-control", title: t('form.title.source_lang') %>
+	  <%= tag('span', class: "glyphicon glyphicon-arrow-right transl-sign") %> 
+	  <%= f.select :trgt_lang_code, options_for_select(Translator.lang_list, @document.trgt_lang_code), {}, {id: "trgt-lang", class: "select2 form-control inline-block", title: t('form.title.target_lang')} %>
+	  <%= f.text_field :trgt_file_name, :placeholder => "_locale_.yml", id: "trgt-file-name", class: "form-control", title: t('form.title.target_file') %>
+	  <%= f.hidden_field :trgt_is_draft, id: 'trgt-is-draft' %>
+		<%= render 'button_save' %>
+	</div>	
+
+	<div class="row">
+	  <div class="tree">
+	    <% prev_level, size = -1, @document.document_row.count %>
+	    <ul>
+				<%= f.fields_for :document_row do |rf| %>
+					<% id, key, is_group, level, path, value = rf.object.id, rf.object.key, rf.object.is_group, rf.object.level, rf.object.path, rf.object.src_value %>
+          <% key_class, transl_class, transl_id, transl_title = get_attributes is_group, id %>
+	        <%= get_uls prev_level, level %>
+	        <li>
+
+						<span class="<%=key_class%>"> 
+						  <%= key %> 
+					    <%= tag('span', class: transl_class, title: transl_title, id: transl_id) if !is_group || id.zero? %>
+						</span>
+
+					  <%= hidden_field_tag("src_plain_array[#{ id }]", value) unless is_group %>
+	          <%= rf.text_area(:src_value, name: "src_array#{ path }", id: "src-array-#{ id }", class: "form-control long", :readonly => true) unless is_group %>
+	          <%= rf.text_area(:trgt_value, name: "trgt_array#{ path }", id: "trgt-array-#{ id }", class: "form-control long") unless is_group %>
+
+	          <%= get_ulorli is_group %>
+	          <%= get_ullis level, id, size %>
+	
+	          <% prev_level = level %>
+		  	<% end %>
+	    </ul>
+	  </div>
+	</div>
+<% end %>

@@ -1,0 +1,18 @@
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+  	  <div class="navbar-header">
+        <div class="navbar-brand">Locales Translator</div>
+      </div>
+
+      <% if Translator.enabled? %>
+	  	  <%= content_tag(:span, t('translation.mt_enabled'), title: t('translation.title.mt_enabled'), class: 'label label-success') %>
+		  <% else %>
+		    <%= content_tag(:span, t('translation.mt_disabled'), title: t('translation.title.mt_disabled'), class: 'label label-warning') %>
+			<% end %>
+
+    </div>
+  </nav>
+</header>
+

@@ -1,0 +1,3 @@
+I18n.translations || (I18n.translations = {});
+I18n.translations["ru"] = {"js":{"messages":{"uploading_progress":"Загрузка файла...","translation_progress":"Перевод...","field_filled":"Поле не пустое. Выполнить перевод?","fields_filled":"Нектороые поля не пустые. Выполнить перевод?"},"tree":{"titles":{"expand_branch":"Развернуть","collapse_branch":"Свернуть"}}}};
+I18n.translations["en"] = {"js":{"messages":{"uploading_progress":"File uploading process...","translation_progress":"Translation in progress...","field_filled":"Field is not empty. Process?","fields_filled":"Some fields is not empty. Process?"},"tree":{"titles":{"expand_branch":"Expand this branch","collapse_branch":"Collapse this branch"}}}};
