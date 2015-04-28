@@ -21,11 +21,11 @@
 
 ru:
   app:
-    lang_list:
-      languages: "Языки"
-      english: "Английский"
-      russian: "Русский"
-      ukrainian: "Украинский"
+    locale_list:
+      locales: "Языки"
+      en: "Английский"
+      ru: "Русский"
+      uk: "Украинский"
   translation:
     mt_enabled: "* Автоперевод доступен"  
     mt_disabled: "Автоперевод недоступен"  

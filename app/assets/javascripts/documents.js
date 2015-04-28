@@ -1,4 +1,3 @@
-// Show/hide machine-translation buttons
 function updateAutoTranslateAbility() {
   var srcLang = $( '#src-lang' ).val().indexOf( "*" );
   var trgtLang = $( '#trgt-lang' ).find( 'option:selected' ).text().indexOf( "*" );
@@ -17,12 +16,18 @@ function callTranslation( data ) {
     data: data,
     dataType: "script",
     beforeSend: function(){
-		showPleaseWait( I18n.t('js.messages.translation_progress') );
+			showPleaseWait( I18n.t('js.messages.translation_progress') );
     },
     success: function( data ) {
-		hidePleaseWait();
+			hidePleaseWait();
     }
   });
+};
+
+function translateFormInit() {
+  updateAutoTranslateAbility();
+  treeView();
+//	hidePleaseWait();
 };
 
 $( document ).ready( function() {
@@ -87,14 +92,6 @@ $( document ).ready( function() {
       if ( !confirm( I18n.t('js.messages.fields_filled') ) ) { return false; }
     }
 		callTranslation( $( "#transl-form" ).serialize() );
-  });
-
-	// On file upload  
-  $( "#upload-form" ).bind('ajax:success', function() {
-	  $( '.select2' ).select2( { width: 'element' } );
-    updateAutoTranslateAbility();
-    treeView();
-  	hidePleaseWait();
   });
 
 	// On select target language

@@ -8,22 +8,20 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-left">
-			    <% if Translator.enabled? %>
-					  <%= content_tag(:span, t('translation.mt_enabled'), title: t('translation.title.mt_enabled'), class: 'label label-success') %>
+					<% if Translator.enabled? %>
+						<%= content_tag(:span, t('translation.mt_enabled'), title: t('translation.title.mt_enabled'), class: 'label label-success') %>
 				 	<% else %>
-				   	<%= content_tag(:span, t('translation.mt_disabled'), title: t('translation.title.mt_disabled'), class: 'label label-warning') %>
+				  	<%= content_tag(:span, t('translation.mt_disabled'), title: t('translation.title.mt_disabled'), class: 'label label-warning') %>
 					<% end %>
 				</ul>
-				<ul class="nav navbar-nav navbar-right" id="app-lang-list">
-			     <li class="dropdown">
-			       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('app.lang_list.languages')%> <span class="caret"></span></a>
-			       <ul class="dropdown-menu app-lang-list" role="menu">
-					 		 <%= content_tag(:li, link_to(t('app.lang_list.english'), root_path(locale: 'en'))) %>
-					 		 <%= content_tag(:li, link_to(t('app.lang_list.russian'), root_path(locale: 'ru'))) %>
-					 		 <%= content_tag(:li, link_to(t('app.lang_list.ukrainian'), root_path(locale: 'uk'))) %>
-			       </ul>
-			     </li>
-			   </ul>
+				<ul class="nav navbar-nav navbar-right">
+			    <li class="dropdown app-locale-list">
+			      <a href="#" class="dropdown-toggle" id="app-locale-list" data-toggle="dropdown" role="button" aria-expanded="false"><%= app_current_locale %> <span class="caret"></span></a>
+			      <ul class="dropdown-menu app-locale-list" role="menu">
+							<%= app_locales_list %>							 
+			      </ul>
+			    </li>
+			  </ul>
 			</div>
 
     </div>

@@ -1,5 +1,6 @@
 <% unless flash[:danger] %>
-  $( '#app-lang-list' ).hide()
+  $( '#app-locale-list' ).attr( "data-disabled", "true" );
   $( '#upload-button' ).html( "<%= j "" %>" )
   $( '#transl-table' ).html( "<%= j "#{render 'table'}".html_safe %>" )
+	translateFormInit();
 <% end %>

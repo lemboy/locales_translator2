@@ -4,6 +4,7 @@
 .navbar {
   margin-bottom: 10px
 }
+
 .navbar-brand {
   font-size: 150%;
   padding-right: 5px;
@@ -15,9 +16,15 @@ html, body {
   height:100%;
 }
 
-.dropdown-menu.app-lang-list {
+.dropdown-menu.app-locale-list {
   min-width: 100%;
   line-height: 0;
+}
+
+.nav > li.app-locale-list > a {
+  &[data-disabled="true"] {
+    opacity: 0.5;
+  }
 }
 
 .dropdown-menu.upload-save {

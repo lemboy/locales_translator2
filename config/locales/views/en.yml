@@ -21,11 +21,11 @@
 
 en:
   app:
-    lang_list:
-      languages: "Languages"
-      english: "English"
-      russian: "Russian"
-      ukrainian: "Ukrainian"
+    locale_list:
+      locales: "Languages"
+      en: "English"
+      ru: "Russian"
+      uk: "Ukrainian"
   translation:
     mt_enabled: "* MT enabled"  
     mt_disabled: "MT disabled"  
