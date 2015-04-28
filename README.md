@@ -24,12 +24,7 @@ Full [Terms of Use](http://legal.yandex.com/translate_api/?ncrnd=2118).
 Testing
 -------
 
-Add API Key to *config/secrets.yml* file 
-```ruby
-test:
-  yandex_api_key: trnsl.1.1._xxx_
-```
-and run
+Run
 ```
 bundle exec rspec spec
 ```
@@ -43,4 +38,4 @@ Demo app is [here](http://locales-translator.herokuapp.com/)
 Thanks
 -------
 
-For "Bootstrap-styled tree widget" from [here](http://jsfiddle.net/umutc1/eyf9q87c/)
+In app used "Bootstrap-styled tree widget" from [here](http://jsfiddle.net/umutc1/eyf9q87c/)
