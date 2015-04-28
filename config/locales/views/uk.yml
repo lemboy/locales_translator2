@@ -2,10 +2,10 @@
 uk:
   app:
     locale_list:
-      locales: "Мови"
-      en: "Англійська"
-      ru: "Росiйська"
-      uk: "Українська"
+      locales: "Languages"
+      en: "English"
+      ru: "Russian"
+      uk: "Ukrainian"
   translation:
     mt_enabled: "* Автопереклад доступний"
     mt_disabled: "Автопереклад недоступний"

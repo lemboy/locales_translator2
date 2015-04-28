@@ -22,10 +22,10 @@
 ru:
   app:
     locale_list:
-      locales: "Языки"
-      en: "Английский"
-      ru: "Русский"
-      uk: "Украинский"
+      locales: "Languages"
+      en: "English"
+      ru: "Russian"
+      uk: "Ukrainian"
   translation:
     mt_enabled: "* Автоперевод доступен"  
     mt_disabled: "Автоперевод недоступен"  
