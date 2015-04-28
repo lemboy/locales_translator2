@@ -1,8 +1,8 @@
-Locales Translator
+Locales Translator (bis)
 ===================
 
 Translator for RoR locale YML files with machine translation ability (Yandex API).
-This is a "re-do" of first [Locales-translator](https://github.com/lemboy/locales_translator)
+This is a "re-do" of the first [Locales-translator](https://github.com/lemboy/locales_translator)
 
 
 Setup
