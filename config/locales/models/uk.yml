@@ -1,0 +1,11 @@
+---
+uk:
+  mt:
+    error:
+      machine_error: "Помилка автоперекладача: "
+      library_error: "Помилка бібліотеки автоперекладача: "
+  service:
+    error:
+      invalid_syntax_yml: "Невірний синтаксис YML файлу"
+      invalid_syntax_json: "Невірний синтаксис JSON файлу"
+      invalid_file: "Невірний формат файлу"

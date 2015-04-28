@@ -1,4 +1,5 @@
 <% unless flash[:danger] %>
+  $( '#app-lang-list' ).hide()
   $( '#upload-button' ).html( "<%= j "" %>" )
   $( '#transl-table' ).html( "<%= j "#{render 'table'}".html_safe %>" )
 <% end %>

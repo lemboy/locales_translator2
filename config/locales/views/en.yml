@@ -20,6 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  app:
+    lang_list:
+      languages: "Languages"
+      english: "English"
+      russian: "Russian"
+      ukrainian: "Ukrainian"
   translation:
     mt_enabled: "* MT enabled"  
     mt_disabled: "MT disabled"  

@@ -26,6 +26,6 @@ ru:
       library_error: "Ошибка библиотеки автопереводчика: "
   service:
     error:
-      invalid_syntax_yml: "Неверный синтакс YML файла"
-      invalid_syntax_json: "Неверный синтакс JSON файла"
+      invalid_syntax_yml: "Неверный синтаксис YML файла"
+      invalid_syntax_json: "Неверный синтаксис JSON файла"
       invalid_file: "Неверный формат файла"

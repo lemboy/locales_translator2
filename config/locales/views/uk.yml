@@ -1,0 +1,34 @@
+---
+uk:
+  app:
+    lang_list:
+      languages: "Мови"
+      english: "Англійська"
+      russian: "Росiйська"
+      ukrainian: "Українська"
+  translation:
+    mt_enabled: "* Автопереклад доступний"
+    mt_disabled: "Автопереклад недоступний"
+    title:
+      mt_enabled: "* Автопереклад доступний"
+      mt_disabled: "Автопереклад недоступний"
+  button:
+    upload: "Завантажити"
+    save: "Зберегти"
+    locale: "Вихідний"
+    draft: "Чернетка"
+    title:
+      upload: "Завантажити файл"
+      save: "Зберегти файл"
+      upload_locale: "Завантажити вихідний файл (yml)"
+      upload_draft: "Завантажити файл чернетки (json)"
+      save_locale: "Зберегти файл результату (yml)"
+      save_draft: "Зберегти як чернетку (json)"
+  form:
+    title:
+      source_file: "Файл оригіналу"
+      source_lang: "Мова оригіналу"
+      target_file: "Файл результату"
+      target_lang: "Мова результату"
+      translate_this: "Перекласти рядок"
+      translate_all: "Перекласти всі рядки"

@@ -15,7 +15,7 @@ class DocumentsController < ApplicationController
       status = AJAX_STATUS_ERROR
     end     
     respond_to do |format|
-      format.html { render 'table', :formats => [:js], status: status }
+      format.html { render 'new', :formats => [:js], status: status }
     end
   end
 

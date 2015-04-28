@@ -1,0 +1,12 @@
+---
+uk:
+  js:
+    messages:
+      uploading_progress: "Завантаження файлу..."
+      translation_progress: "Переклад..."
+      field_filled: "Поле не порожнє. Виконати переклад?"
+      fields_filled: "Деякі поля не порожні. Виконати переклад?"
+    tree:
+      titles:
+        expand_branch: "Розгорнути"
+        collapse_branch: "Згорнути"

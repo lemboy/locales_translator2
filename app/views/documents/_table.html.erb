@@ -5,7 +5,7 @@
 	  <%= f.hidden_field :src_lang_code, id: "src-lang-code" %>
 	  <%= text_field_tag 'src_lang', Translator.lang_name(@document.src_lang_code), id: "src-lang", :readonly => true, class: "form-control", title: t('form.title.source_lang') %>
 	  <%= tag('span', class: "glyphicon glyphicon-arrow-right transl-sign") %> 
-	  <%= f.select :trgt_lang_code, options_for_select(Translator.lang_list, @document.trgt_lang_code), {}, {id: "trgt-lang", class: "select2 form-control inline-block", title: t('form.title.target_lang')} %>
+	  <%= f.select :trgt_lang_code, options_for_select(Translator.lang_list, @document.trgt_lang_code), {}, {id: "trgt-lang", class: "form-control inline-block", title: t('form.title.target_lang')} %>
 	  <%= f.text_field :trgt_file_name, :placeholder => "_locale_.yml", id: "trgt-file-name", class: "form-control", title: t('form.title.target_file') %>
 	  <%= f.hidden_field :trgt_is_draft, id: 'trgt-is-draft' %>
 		<%= render 'button_save' %>
