@@ -9,9 +9,7 @@ class TranslationsController < ApplicationController
       flash[:danger] = creation.error 
       status = AJAX_STATUS_ERROR
     end
-    respond_to do |format|
-      format.html { render :formats => [:js], status: status }
-    end
+    render :formats => [:js], status: status
   end
   
 end

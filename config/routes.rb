@@ -5,6 +5,5 @@ Rails.application.routes.draw do
     post 'new' => :new, :as => :new_document
   end
   resources :documents, only: [:index, :create]
-
-  resources :translations
+  resources :translations, only: :create
 end

@@ -14,10 +14,8 @@ class DocumentsController < ApplicationController
       flash[:danger] = uploading.error
       status = AJAX_STATUS_ERROR
     end     
-    respond_to do |format|
-      format.html { render 'new', :formats => [:js], status: status }
-    end
-  end
+    render :formats => [:js], status: status
+ end
 
   def create
     creation = CreateFile.call(params: params)
@@ -25,9 +23,7 @@ class DocumentsController < ApplicationController
       send_data creation.content, :filename => creation.file_name
     else
       flash[:danger] = creation.error
-      respond_to do |format|
-        format.html { render :formats => [:js]}
-      end
+      render :formats => [:js]
     end      
   end
 end
